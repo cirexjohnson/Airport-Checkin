@@ -39,7 +39,7 @@ def checkin(email=os.environ.get('EMAIL'), password=os.environ.get('PASSWORD'),
 
 result = checkin()
 if SCKEY != '':
-    sendurl = 'https://api.day.app/' + SCKEY + '/TNT机场签到/' + result + '?icon=https://s2.loli.net/2023/02/02/DB9SkMcCntlO6zw.png&group=机场签到'
+    sendurl = 'https://api.day.app/' + SCKEY + '/TNT机场签到已完成/' + result + '?icon=https://s2.loli.net/2023/02/02/DB9SkMcCntlO6zw.png&group=签到任务报告'
     r = requests.get(url=sendurl)
 if TG_USER_ID != '':
     sendurl = f'https://api.telegram.org/bot{TG_BOT_TOKEN}/sendMessage?chat_id={TG_USER_ID}&text={result}&disable_web_page_preview=True'
